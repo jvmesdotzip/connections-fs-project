@@ -1,2 +1,6 @@
 #ignore JetBrains .idea files
 *.idea/
+*.json
+node_modules/
+server/.env
+

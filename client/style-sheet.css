@@ -1,10 +1,18 @@
 :root {
-    --selected-grey: #5a594e;
-    --primary-item-color: #5c4232;
+    --selected: #5a594e;
+    --text-border-color: #5c4232;
+    --text-border-color-hover: #fffdd0;
     --background-gradient: linear-gradient(to right, #fffdd0, #E9E9DA);
-    --darkmode-gradient: linear-gradient(100deg, rgba(0,0,0,1) 0%, rgba(43,32,25,1) 100%);
     --header-button-hover: rgb(255, 255, 255);
-    --primary-text-color: white;
+}
+
+.dark-mode {
+    --selected: #5a594e;
+    --text-border-color: #fffdd0;
+    --text-border-color-hover: #5c4232;
+    --background-gradient: linear-gradient(100deg, rgba(0,0,0,1) 0%, rgba(43,32,25,1) 100%);
+    --hover-gamebutton-color: #5c4232;
+    --header-button-hover: black;
 }
 
 body {
@@ -14,10 +22,6 @@ body {
     flex-direction: column;
     height: 5000px;
     transition: background 1s;
-}
-
-.dark-bg {
-    background: var(--darkmode-gradient);
 }
 
 #page-header {
@@ -33,7 +37,7 @@ body {
     height: 50px;
     cursor: pointer;
     box-sizing: border-box;
-    color: var(--primary-item-color);
+    color: var(--text-border-color);
 }
 
 .expand-bar {
@@ -51,7 +55,7 @@ body {
 }
 
 .home {
-    padding: 0px 15px;
+    padding: 0 15px;
     font-size: 16px;
     background-color: transparent;
     border-radius: 8px;
@@ -61,11 +65,11 @@ body {
 .home:hover {
     opacity: 55%;
     background-color: var(--header-button-hover);
-    color: var(--primary-item-color);
+    color: var(--text-border-color);
 }
 
 .lightswitch {
-    color: var(--primary-item-color);
+    color: var(--text-border-color);
     border-radius: 8px;
     font-size: 20px;
     box-sizing: border-box;
@@ -97,19 +101,25 @@ body {
 
 .game-button + label {
     cursor: pointer;
-    font-family: Arial;
+    font-family: Courier New;
     font-weight: bold;
     text-align: center;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     border-radius: 15px;
-    border: var(--primary-item-color) 2px solid;
+    border: var(--text-border-color) 2px solid;
     transition: color 0.25s, background-color 0.3s;
+    color: var(--text-border-color);
 }
 
 .game-button + label:hover {
     scale: 1.03;
+}
+
+.game-button[disabled] + label:hover {
+    scale: 1;
+    cursor: default;
 }
 
 .game-button + label p {
@@ -118,8 +128,8 @@ body {
 }
 
 .game-button:checked + label {
-    background-color: var(--selected-grey);
-    color: var(--primary-text-color);
+    background-color: var(--selected);
+    color: var(--text-border-color);
     font-weight: bold;
 }
 
@@ -131,6 +141,7 @@ body {
     font-family: Courier New;
     align-items: center;
     justify-content: center;
+    color: var(--text-border-color);
 }
 
 .shuffle-deselect-submit-container {
@@ -138,7 +149,8 @@ body {
     grid-column: 1 / 5;
     display: flex;
     justify-content: center;
-    border-color: var(--primary-item-color);
+    border-color: var(--text-border-color);
+
 }
 
 .sds {
@@ -153,6 +165,8 @@ body {
     background-color: transparent;
     transition: width 0.25s;
     font-family: Courier New;
+    color: var(--text-border-color);
+    border-color: var(--text-border-color);
 }
 
 .deselect-button {
@@ -163,6 +177,8 @@ body {
     background-color: transparent;
     transition: width 0.25s;
     font-family: Courier New;
+    color: var(--text-border-color);
+    border-color: var(--text-border-color);
 }
 
 .submit-button {
@@ -173,28 +189,29 @@ body {
     background-color: transparent;
     transition: width 0.25s;
     font-family: Courier New;
+    color: var(--text-border-color);
+    border-color: var(--text-border-color);
 }
 
 .shuffle-button:hover {
     width: 11%;
-    color: white;
-    background-color: var(--primary-item-color);
-    border: 3px var(--primary-item-color) hidden;
+    color: var(--text-border-color-hover);
+    background-color: var(--text-border-color);
+    border: 3px;
 }
 
 .deselect-button:hover {
     width: 16%;
-    color: var(--primary-text-color);
-    background-color: var(--primary-item-color);
-    border: 1px var(--primary-item-color) hidden;
+    color: var(--text-border-color-hover);
+    background-color: var(--text-border-color);
+    border: 1px var(--text-border-color);
 }
 
 .submit-button:hover {
-
     width: 14%;
-    color: white;
-    border: 1px var(--primary-item-color) hidden;
-    background-color: var(--primary-item-color);
+    color: var(--text-border-color-hover);
+    border: 1px;
+    background-color: var(--text-border-color);
 }
 
 
