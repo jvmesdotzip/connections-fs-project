@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(chances.length);
 });
 
-function connectToDatabase() {return true}
+function connectToDatabase() {}
 
 //limits the number of currently selected checkboxes to four
 //SHOULD:

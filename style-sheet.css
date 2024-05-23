@@ -190,6 +190,7 @@ body {
 }
 
 .submit-button:hover {
+
     width: 14%;
     color: white;
     border: 1px var(--primary-item-color) hidden;
