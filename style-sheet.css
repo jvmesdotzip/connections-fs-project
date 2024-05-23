@@ -1,0 +1,205 @@
+:root {
+    --selected-grey: #5a594e;
+    --primary-item-color: #5c4232;
+    --background-gradient: linear-gradient(to right, #fffdd0, #E9E9DA);
+    --darkmode-gradient: linear-gradient(100deg, rgba(0,0,0,1) 0%, rgba(43,32,25,1) 100%);
+    --header-button-hover: rgb(255, 255, 255);
+    --primary-text-color: white;
+}
+
+body {
+    background: var(--background-gradient);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 5000px;
+    transition: background 1s;
+}
+
+.dark-bg {
+    background: var(--darkmode-gradient);
+}
+
+#page-header {
+    display: flex; /* maybe make sticky/give fixed position */
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.flex-header-button {
+    font-family: Courier New;
+    font-weight: bolder;
+    height: 50px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: var(--primary-item-color);
+}
+
+.expand-bar {
+    font-size: 20px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    transition: 0.35s;
+}
+
+.expand-bar:hover {
+    transform: rotate(90deg);
+    border-radius: 100px 1px;
+}
+
+.home {
+    padding: 0px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: none;
+}
+
+.home:hover {
+    opacity: 55%;
+    background-color: var(--header-button-hover);
+    color: var(--primary-item-color);
+}
+
+.lightswitch {
+    color: var(--primary-item-color);
+    border-radius: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 13px;
+    transition: scale 0.25s;
+}
+
+.lightswitch:hover {
+    scale: 1.2;
+}
+
+
+.game-container form {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto auto auto auto 35px 45px;
+    grid-template-columns: auto auto auto auto;
+    background-color: transparent; /*#fb7185*/
+    margin-top: 7vh;
+    width: 50vw;
+    height: 70vh;
+    border: transparent 5px solid; /*#e11d48*/
+    border-radius: 15px;
+}
+
+.game-button {
+    display: none;
+}
+
+.game-button + label {
+    cursor: pointer;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: var(--primary-item-color) 2px solid;
+    transition: color 0.25s, background-color 0.3s;
+}
+
+.game-button + label:hover {
+    scale: 1.03;
+}
+
+.game-button + label p {
+    margin-top: 20%;
+    font-size: 100%;
+}
+
+.game-button:checked + label {
+    background-color: var(--selected-grey);
+    color: var(--primary-text-color);
+    font-weight: bold;
+}
+
+.chances-remaining-div {
+    position: relative;
+    grid-row: 5;
+    grid-column: 1 / 5;
+    display: flex;
+    font-family: Courier New;
+    align-items: center;
+    justify-content: center;
+}
+
+.shuffle-deselect-submit-container {
+    grid-row: 6;
+    grid-column: 1 / 5;
+    display: flex;
+    justify-content: center;
+    border-color: var(--primary-item-color);
+}
+
+.sds {
+    overflow-x: hidden;
+}
+
+.shuffle-button {
+    cursor: pointer;
+    width: 10%;
+    border-radius: 25px;
+    margin-left: 10px;
+    background-color: transparent;
+    transition: width 0.25s;
+    font-family: Courier New;
+}
+
+.deselect-button {
+    cursor: pointer;
+    width: 15%;
+    border-radius: 25px;
+    margin-left: 10px;
+    background-color: transparent;
+    transition: width 0.25s;
+    font-family: Courier New;
+}
+
+.submit-button {
+    cursor: pointer;
+    width: 13%;
+    border-radius: 25px;
+    margin-left: 10px;
+    background-color: transparent;
+    transition: width 0.25s;
+    font-family: Courier New;
+}
+
+.shuffle-button:hover {
+    width: 11%;
+    color: white;
+    background-color: var(--primary-item-color);
+    border: 3px var(--primary-item-color) hidden;
+}
+
+.deselect-button:hover {
+    width: 16%;
+    color: var(--primary-text-color);
+    background-color: var(--primary-item-color);
+    border: 1px var(--primary-item-color) hidden;
+}
+
+.submit-button:hover {
+    width: 14%;
+    color: white;
+    border: 1px var(--primary-item-color) hidden;
+    background-color: var(--primary-item-color);
+}
+
+
+
+
+
+
+
+
