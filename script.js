@@ -1,4 +1,4 @@
-// import {initGameboard} from "../server/database.js";
+// import { initGameBoard } from './database.js'
 
 const max = 4;
 let darkMode = localStorage.getItem("darkMode");
@@ -46,14 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //fetches data from DB to initialize first tile titles
 document.addEventListener("DOMContentLoaded", () => {
-    try {//get array of game-button
-        let result = initGameboard();
-        console.log(result);
-        //iterate through game buttons, altering the innerHTML
-    } catch (e) {
-        console.error(e);
-    }
-});
+
+ });
 
 //element.addEventListener("input"); //on tile selection
 
