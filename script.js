@@ -1,4 +1,4 @@
-// import { initGameBoard } from './database.js'
+//import { initGameBoard } from './database.js'
 
 const max = 4;
 let darkMode = localStorage.getItem("darkMode");
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// toggles dark/light mode; save state upon reload
 document.addEventListener("DOMContentLoaded", function() {
     const [darkModeToggle] = document.querySelectorAll("#lightswitch");
     const enableDarkMode = () => {

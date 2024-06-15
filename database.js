@@ -16,6 +16,8 @@ export async function initGameBoard() {
     return arr;
 }
 
-console.log(await initGameBoard());
+// console.log(await initGameBoard());
 
-export function test() {console.log("test")}
+export function test() {
+    console.log("Hello, World!");
+}
