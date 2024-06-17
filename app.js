@@ -8,14 +8,17 @@ dotenv.config();
 
 app.use((err, request, response, next) => {
     console.error(err);
-    response.status(500).send("Something broke!");
+    // res.status(500).send("Something broke!");
 });
 
 //try setting html on page
 app.get('/', async (req, res) => {
-    let arr = await initGameBoard();
-    // res.send(``);
-    // console.log(arr);
+    res.send('Hello World!');
+});
+
+app.get('/gameboard', async (req, res) => {
+    const gameboardList = await initGameBoard();
+    res.send(gameboardList);
 });
 
 app.listen(port, () => {

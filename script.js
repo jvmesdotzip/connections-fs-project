@@ -1,4 +1,3 @@
-//import { initGameBoard } from './database.js'
 
 const max = 4;
 let darkMode = localStorage.getItem("darkMode");
