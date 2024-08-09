@@ -1,4 +1,3 @@
-
 const max = 4;
 let darkMode = localStorage.getItem("darkMode");
 
@@ -45,11 +44,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //fetches data from DB to initialize first tile titles
-document.addEventListener("DOMContentLoaded", () => {
+//change fetch URL before deployment
+document.addEventListener("DOMContentLoaded", async () =>
+{
+    const resp = await fetch('gameboard')
+    const result = await resp.json()
+    let tiles = document.querySelectorAll('label')
+    tiles.forEach((item, index) => {
+        item.innerHTML = result.result[index];
+    })
 
  });
-
-//element.addEventListener("input"); //on tile selection
 
 //removes question mark icons to show how many chances are left
 function removeChance() {
